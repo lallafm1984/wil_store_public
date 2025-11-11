@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* 재고 덮어쓰기 테이블 스크롤바 개선 */
+.table-scroll::-webkit-scrollbar {
+  height: 12px;
+}
+.table-scroll::-webkit-scrollbar-thumb {
+  background-color: rgba(100, 116, 139, 0.6);
+  border-radius: 6px;
+}
+.table-scroll::-webkit-scrollbar-track {
+  background-color: rgba(148, 163, 184, 0.2);
+}
+
+/* 항상 가로 스크롤 공간을 유지하여 스크롤바가 사라지지 않게 */
+.table-scroll {
+  scrollbar-gutter: stable both-edges;
+  overflow-x: scroll; /* 강제 표시 */
+}
