@@ -15,6 +15,16 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "WIL Store - 관리자 대시보드",
   description: "WIL Store 상품 관리 시스템",
+  icons: {
+    icon: [
+      { url: "/favicon/Favico_16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon/Favico_32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon/Favico_192x192.png", sizes: "192x192", type: "image/png" },
+    ],
+    apple: [
+      { url: "/favicon/Favico_180x180.png", sizes: "180x180", type: "image/png" },
+    ],
+  },
 };
 
 export default function RootLayout({
