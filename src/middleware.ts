@@ -6,11 +6,8 @@ export function middleware(req: NextRequest) {
 
   // 허용할 페이지들은 그대로 통과
   const allowedPaths = [
-    "/",
     "/stock-add",
-    "/stock-merge",
-    "/excel-compare",
-    "/settlement-review",
+    ,
   ];
 
   if (allowedPaths.some((p) => pathname === p || pathname.startsWith(p + "/"))) {
